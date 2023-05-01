@@ -1,0 +1,48 @@
+FQBN: thinary:avr:nona4808:mode=off
+Using board 'nona4808' from platform in folder: /Users/fuxen/Library/Arduino15/packages/thinary/hardware/avr/1.0.0
+Using core 'arduino' from platform in folder: /Users/fuxen/Library/Arduino15/packages/thinary/hardware/avr/1.0.0
+
+Detecting libraries used...
+/Users/fuxen/Library/Arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/avr-g++ -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -flto -w -x c++ -E -CC -mmcu=atmega4808 -DF_CPU=16000000L -DARDUINO=10607 -DARDUINO_AVR_NANO_EVERY -DARDUINO_ARCH_AVR -DMILLIS_USE_TIMERB2 -DNO_EXTERNAL_I2C_PULLUP -I/Users/fuxen/Library/Arduino15/packages/thinary/hardware/avr/1.0.0/cores/arduino/api/deprecated -I/Users/fuxen/Library/Arduino15/packages/thinary/hardware/avr/1.0.0/cores/arduino -I/Users/fuxen/Library/Arduino15/packages/thinary/hardware/avr/1.0.0/variants/nona4808 /private/var/folders/18/ffy60m_n68gg40vgsgmc669c0000gn/T/arduino/sketches/AE6ADC181E2D5BACF696C476E9A01D45/sketch/sketch_apr26a.ino.cpp -o /dev/null
+
+Generating function prototypes...
+/Users/fuxen/Library/Arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/avr-g++ -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -flto -w -x c++ -E -CC -mmcu=atmega4808 -DF_CPU=16000000L -DARDUINO=10607 -DARDUINO_AVR_NANO_EVERY -DARDUINO_ARCH_AVR -DMILLIS_USE_TIMERB2 -DNO_EXTERNAL_I2C_PULLUP -I/Users/fuxen/Library/Arduino15/packages/thinary/hardware/avr/1.0.0/cores/arduino/api/deprecated -I/Users/fuxen/Library/Arduino15/packages/thinary/hardware/avr/1.0.0/cores/arduino -I/Users/fuxen/Library/Arduino15/packages/thinary/hardware/avr/1.0.0/variants/nona4808 /private/var/folders/18/ffy60m_n68gg40vgsgmc669c0000gn/T/arduino/sketches/AE6ADC181E2D5BACF696C476E9A01D45/sketch/sketch_apr26a.ino.cpp -o /private/var/folders/18/ffy60m_n68gg40vgsgmc669c0000gn/T/arduino/sketches/AE6ADC181E2D5BACF696C476E9A01D45/preproc/ctags_target_for_gcc_minus_e.cpp
+/Users/fuxen/Library/Arduino15/packages/builtin/tools/ctags/5.8-arduino11/ctags -u --language-force=c++ -f - --c++-kinds=svpf --fields=KSTtzns --line-directives /private/var/folders/18/ffy60m_n68gg40vgsgmc669c0000gn/T/arduino/sketches/AE6ADC181E2D5BACF696C476E9A01D45/preproc/ctags_target_for_gcc_minus_e.cpp
+
+Compiling sketch...
+/Users/fuxen/Library/Arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/avr-g++ -c -g -Os -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega4808 -DF_CPU=16000000L -DARDUINO=10607 -DARDUINO_AVR_NANO_EVERY -DARDUINO_ARCH_AVR -DMILLIS_USE_TIMERB2 -DNO_EXTERNAL_I2C_PULLUP -I/Users/fuxen/Library/Arduino15/packages/thinary/hardware/avr/1.0.0/cores/arduino/api/deprecated -I/Users/fuxen/Library/Arduino15/packages/thinary/hardware/avr/1.0.0/cores/arduino -I/Users/fuxen/Library/Arduino15/packages/thinary/hardware/avr/1.0.0/variants/nona4808 /private/var/folders/18/ffy60m_n68gg40vgsgmc669c0000gn/T/arduino/sketches/AE6ADC181E2D5BACF696C476E9A01D45/sketch/sketch_apr26a.ino.cpp -o /private/var/folders/18/ffy60m_n68gg40vgsgmc669c0000gn/T/arduino/sketches/AE6ADC181E2D5BACF696C476E9A01D45/sketch/sketch_apr26a.ino.cpp.o
+/private/var/folders/18/ffy60m_n68gg40vgsgmc669c0000gn/T/.arduinoIDE-unsaved2023326-2964-1gpqc6g.vph0j/sketch_apr26a/sketch_apr26a.ino:23:0: warning: "F_CPU" redefined
+ #define F_CPU 2666666
+ 
+<command-line>:0:0: note: this is the location of the previous definition
+/private/var/folders/18/ffy60m_n68gg40vgsgmc669c0000gn/T/.arduinoIDE-unsaved2023326-2964-1gpqc6g.vph0j/sketch_apr26a/sketch_apr26a.ino: In function 'int main()':
+/private/var/folders/18/ffy60m_n68gg40vgsgmc669c0000gn/T/.arduinoIDE-unsaved2023326-2964-1gpqc6g.vph0j/sketch_apr26a/sketch_apr26a.ino:71:42: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+         USART0_sendString("Chutzpah!\r\n");
+                                          ^
+Compiling libraries...
+
+Compiling core...
+
+Using previously compiled file: /private/var/folders/18/ffy60m_n68gg40vgsgmc669c0000gn/T/arduino/sketches/AE6ADC181E2D5BACF696C476E9A01D45/core/variant.c.o
+Using precompiled core: /private/var/folders/18/ffy60m_n68gg40vgsgmc669c0000gn/T/arduino/cores/thinary_avr_nona4808_mode_off_9bbf764c6e106b0136ca8b7fdc588845/core.a
+
+Linking everything together...
+/Users/fuxen/Library/Arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/avr-gcc -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -Wl,--section-start=.text=0x0 -mmcu=atmega4808 -o /private/var/folders/18/ffy60m_n68gg40vgsgmc669c0000gn/T/arduino/sketches/AE6ADC181E2D5BACF696C476E9A01D45/sketch_apr26a.ino.elf /private/var/folders/18/ffy60m_n68gg40vgsgmc669c0000gn/T/arduino/sketches/AE6ADC181E2D5BACF696C476E9A01D45/sketch/sketch_apr26a.ino.cpp.o /private/var/folders/18/ffy60m_n68gg40vgsgmc669c0000gn/T/arduino/sketches/AE6ADC181E2D5BACF696C476E9A01D45/core/variant.c.o /private/var/folders/18/ffy60m_n68gg40vgsgmc669c0000gn/T/arduino/sketches/AE6ADC181E2D5BACF696C476E9A01D45/../../cores/thinary_avr_nona4808_mode_off_9bbf764c6e106b0136ca8b7fdc588845/core.a -L/private/var/folders/18/ffy60m_n68gg40vgsgmc669c0000gn/T/arduino/sketches/AE6ADC181E2D5BACF696C476E9A01D45 -lm
+/Users/fuxen/Library/Arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/avr-objcopy -O binary -R .eeprom /private/var/folders/18/ffy60m_n68gg40vgsgmc669c0000gn/T/arduino/sketches/AE6ADC181E2D5BACF696C476E9A01D45/sketch_apr26a.ino.elf /private/var/folders/18/ffy60m_n68gg40vgsgmc669c0000gn/T/arduino/sketches/AE6ADC181E2D5BACF696C476E9A01D45/sketch_apr26a.ino.bin
+/Users/fuxen/Library/Arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/avr-objcopy -O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0 /private/var/folders/18/ffy60m_n68gg40vgsgmc669c0000gn/T/arduino/sketches/AE6ADC181E2D5BACF696C476E9A01D45/sketch_apr26a.ino.elf /private/var/folders/18/ffy60m_n68gg40vgsgmc669c0000gn/T/arduino/sketches/AE6ADC181E2D5BACF696C476E9A01D45/sketch_apr26a.ino.eep
+/Users/fuxen/Library/Arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/avr-objcopy -O ihex -R .eeprom /private/var/folders/18/ffy60m_n68gg40vgsgmc669c0000gn/T/arduino/sketches/AE6ADC181E2D5BACF696C476E9A01D45/sketch_apr26a.ino.elf /private/var/folders/18/ffy60m_n68gg40vgsgmc669c0000gn/T/arduino/sketches/AE6ADC181E2D5BACF696C476E9A01D45/sketch_apr26a.ino.hex
+
+/Users/fuxen/Library/Arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/avr-size -A /private/var/folders/18/ffy60m_n68gg40vgsgmc669c0000gn/T/arduino/sketches/AE6ADC181E2D5BACF696C476E9A01D45/sketch_apr26a.ino.elf
+Sketch uses 258 bytes (0%) of program storage space. Maximum is 49152 bytes.
+Global variables use 0 bytes (0%) of dynamic memory, leaving 6144 bytes for local variables. Maximum is 6144 bytes.
+Failed uploading: no upload port provided
+
+==================
+
+Detecting libraries used...
+/Users/fuxen/Library/Arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/avr-g++ -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -flto -w -x c++ -E -CC -mmcu=atmega4808 -DF_CPU=2666666L -DARDUINO=10607 -DARDUINO_AVR_NANO_EVERY -DARDUINO_ARCH_AVR -DMILLIS_USE_TIMERB2 -DNO_EXTERNAL_I2C_PULLUP -I/Users/fuxen/Library/Arduino15/packages/thinary/hardware/avr/1.0.0/cores/arduino/api/deprecated -I/Users/fuxen/Library/Arduino15/packages/thinary/hardware/avr/1.0.0/cores/arduino -I/Users/fuxen/Library/Arduino15/packages/thinary/hardware/avr/1.0.0/variants/nona4808 /private/var/folders/18/ffy60m_n68gg40vgsgmc669c0000gn/T/arduino/sketches/AE6ADC181E2D5BACF696C476E9A01D45/sketch/sketch_apr26a.ino.cpp -o /dev/null
+
+
+
+
+

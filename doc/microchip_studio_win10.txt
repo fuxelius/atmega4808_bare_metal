@@ -1,0 +1,20 @@
+Compile:
+/Users/fuxen/Library/Arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/avr-gcc -I"avr_hacks/include" -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega4808 -B "avr_hacks/atmega4808" -c -std=gnu99 -MD -MP -MF "main.d" -MT"main.d" -MT"main.o"   -o "main.o" "main.c" 
+
+Link:
+/Users/fuxen/Library/Arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/avr-gcc -o uart_test2.elf  main.o   -Wl,-Map="uart_test2.map" -Wl,--start-group -Wl,-lm  -Wl,--end-group -Wl,--gc-sections -mmcu=atmega4808 -B "avr_hacks/atmega4808"
+
+2HEX:
+/Users/fuxen/Library/Arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/avr-objcopy -O ihex -R .eeprom -R .fuse -R .lock -R .signature -R .user_signatures  "uart_test2.elf" "uart_test2.hex"
+
+EEPROM:
+/Users/fuxen/Library/Arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/avr-objcopy -j .eeprom  --set-section-flags=.eeprom=alloc,load --change-section-lma .eeprom=0  --no-change-warnings -O ihex "uart_test2.elf" "uart_test2.eep" || exit 0
+
+lss:
+/Users/fuxen/Library/Arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/avr-objcopy -h -S "uart_test2.elf" > "uart_test2.lss"
+
+srec:
+/Users/fuxen/Library/Arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/avr-objcopy -O srec -R .eeprom -R .fuse -R .lock -R .signature -R .user_signatures "uart_test2.elf" "uart_test2.srec"
+
+AVRDUDE:
+avrdude -c atmelice_updi -Pusb  -b9600 -p m4808 -U flash:w:uart_test2.hex:i
