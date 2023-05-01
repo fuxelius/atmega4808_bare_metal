@@ -7,7 +7,7 @@
 ## Objectives
 This guide will take you through the generic setup of the AVR C-compiler for a Mac Silicon (or Intel) computer for developing with the [ATmega4808](https://www.microchip.com/en-us/product/ATMEGA4808) microcontroller. Development is done in **SHELL**, [Visual Studio Code](https://code.visualstudio.com), [Atmel-ICE Debugger](https://onlinedocs.microchip.com/pr/GUID-DDB0017E-84E3-4E77-AAE9-7AC4290E5E8B-en-US-4/index.html?GUID-9B349315-2842-4189-B88C-49F4E1055D7F) and [GNU make](https://www.gnu.org/software/make/) (Makefile). The result will be a complete environment for serious embedded programming. 
 
-If you do not own a barabone ATmega4808 development board, the [Arduino Nano Every](https://store.arduino.cc/products/arduino-nano-every) is an excellent start. I have also written a  "[C Programming for 'Arduino Nano Every' Board (ATmega4809) on a Mac and VS Code](https://github.com/fuxelius/nano_every_bare_metal)" that is a rewrite of this article for the Nano Every board.
+If you do not own a barebone ATmega4808 development board, the [Arduino Nano Every](https://store.arduino.cc/products/arduino-nano-every) is an excellent start. I have also written a  "[C Programming for 'Arduino Nano Every' Board (ATmega4809) on a Mac and VS Code](https://github.com/fuxelius/nano_every_bare_metal)" that is a rewrite of this article for the Nano Every board.
 
 ## Introduction
 
@@ -86,6 +86,9 @@ If it scrolls it means **everything is working** and its all a go!
 		
 Quit serial with ``CTRL+T Q``
 
+### Roll it all your own
+For those so inclined, the entire avr-toolchain can be compiled from scratch by following these [instructions](https://github.com/arduino/toolchain-avr).
+
 ## C Development
 
 Now that the environment is up and functional, we should take a look at how C-development takes place.
@@ -161,6 +164,8 @@ The [C Programming Language](https://www.amazon.com/Programming-Language-2nd-Bri
 
 Unless you get ``DEVICE`` and ``PARTNO`` right it will not compile and upload correctly, it is bad at guessing.
 
+``SERIAL_PORT``: Change the naming of this to match your serial.
+
 ``TOOLCHAIN_PATH``: This refers into the library directory of the Arduino distribution, ``~/Library/Arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin``. A problem with this is that it can change if a new Arduino IDE installation takes place and removes the old one. A remedy to this is to copy the AVR toolchain out of Arduino IDE to a safe place in ``~/Library``:
 
 	cp ~/Library/Arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin \
@@ -171,7 +176,7 @@ Unless you get ``DEVICE`` and ``PARTNO`` right it will not compile and upload co
 
 	mv avr_haxx ~/Library/AVR/avr_haxx
 
-Now AVR toolchain resides ``~/Library``. The compiler suite will not be corrupted or change over time, even if we switch, update or reinstall the computer.
+Now AVR toolchain resides ``~/Library``. The compiler suite will not be corrupted or change over time, even if we update the Arduino software.
 
 	~/Library/AVR/avr-toolchain/...
 	~/Library/AVR/avr_haxx/..
@@ -186,6 +191,8 @@ The C-project folders now only need the ``Makefile`` and C-code to compile and f
 <img src="doc/pic/project_x.png" width="400">
 
 To understand and further develop the ``Makefile`` you need to learn how [makefiles](https://makefiletutorial.com) work. It is a bit tricky for young players, but once you got the hang of it, its really makes the day!
+
+
 
 ### AVRDUDE
 [AVRDUDE](https://github.com/avrdudes/avrdude#) - AVR Downloader Uploader - is a program for downloading and uploading the on-chip memories of Atmel’s AVR microcontrollers. It can program the Flash and EEPROM, and where supported by the serial programming protocol, it can program fuse and lock bits. AVRDUDE also supplies a direct instruction mode allowing one to issue any programming instruction to the AVR chip regardless of whether AVRDUDE implements that specific feature of a particular chip. For changing parameters in AVRDUDE have a look in the [manual](https://avrdudes.github.io/avrdude/).

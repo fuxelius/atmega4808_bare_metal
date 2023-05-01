@@ -80,12 +80,10 @@ deploy:
 	cp $(TARGET).hex $(DEPLOYDIR)/$(TARGET)_$(TODAY).hex
 	md5sum $(DEPLOYDIR)/$(TARGET)_$(TODAY).hex > $(DEPLOYDIR)/$(TARGET)_$(TODAY).md5
 
-flash:	all
-# 	. $(AVR_HAXX_PATH)/reset_wait 				
+flash:	all			
 	$(AVRDUDE) -U flash:w:$(TARGET).hex:i
 
 fuse:
-# 	. $(AVR_HAXX_PATH)/reset_wait 
 	$(AVRDUDE) $(FUSES)
 
 install: flash fuse
