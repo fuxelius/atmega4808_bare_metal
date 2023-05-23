@@ -50,7 +50,7 @@ SIZE       = $(AVR_SIZE) --format=avr --mcu=$(DEVICE) $(TARGET).elf
 ######################################################################################
 AVRDUDE = $(AVR_DUDE) $(PROGRAMMER)
 
-COMPILE = $(AVR_GCC) -Wall -DF_CPU=$(CLOCK) -mmcu=$(DEVICE) -Og -std=gnu99 \
+COMPILE = $(AVR_GCC) -Wall -DF_CPU=$(CLOCK) -mmcu=$(DEVICE) -Og -std=gnu11 \
 		  -I"$(AVR_HAXX_PATH)/include" -B"$(AVR_HAXX_PATH)/devices/$(DEVICE)" \
 		  -ffunction-sections -MD -MP -fdata-sections -fpack-struct -fshort-enums -g2 
 
